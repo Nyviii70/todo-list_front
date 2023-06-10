@@ -9,6 +9,9 @@
 <ion-content [fullscreen]="true">
     <ion-grid>
       <ion-row>
+        <!-- TODO
+        add loop to display each todo on one line
+        -->
         <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
       </ion-row>
       <ion-row>
@@ -28,7 +31,7 @@
       <ng-template>
         <ion-header>
           <ion-toolbar>
-            <ion-title>Todo</ion-title>
+            <ion-title color="tertiary" >Todo</ion-title>
             <ion-buttons slot="end">
               <ion-button color="tertiary" (click)="setOpen(false)">Fermer</ion-button>
             </ion-buttons>
