@@ -11,7 +11,11 @@ export class HomePage {
   constructor(private router: Router) {}
   handleCreateTodo() {
   this.router.navigate(["/create-new-list"])
-}
-
+  }
+  // TODO
+  // make function who send user at the right todo with id_todo
+  handleConsultTodo() {
+    this.router.navigate(["/todo-consulting"])
+  }
 }
 
