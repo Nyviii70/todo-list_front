@@ -1,49 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header collapse="fade">
   <ion-toolbar>
-    <ion-row>
-      <ion-col>
-        <ion-title>
-          My Todo
-        </ion-title>
-      </ion-col>
-      <ion-button fill="clear">
-        <ion-icon slot="icon-only" name="star"></ion-icon>
-      </ion-button>
-    </ion-row>
+    <ion-title class="ion-text-center" size="large" color="tertiary">My Todo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title color="tertiary" class="ion-text-center" size="large">My Todo</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container1">
-    test container
-  </div>
-
-  <div id="lists">
-    <ion-grid>
-      <ion-row>
-        <ion-col>Mes listes</ion-col>
-        <ion-col><ion-button color="secondary">+</ion-button></ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
-  
   <div id="container">
+    <div id="lists">
+      <div color="tertiary" id="my_lists">Mes listes</div>
+      <ion-button (click)="handleCreateTodo()" color="tertiary" size="small">+</ion-button>
+    </div>
     <ion-grid>
       <ion-row>
-        <ion-col><ion-button color="primary"><ion-icon slot="start" name="star"></ion-icon>Liste 1</ion-button></ion-col>
-        <ion-col><ion-button color="secondary"><ion-icon slot="start" name="star"></ion-icon>Liste 2</ion-button></ion-col>
-      </ion-row>
-    </ion-grid>
-    <ion-grid>
-      <ion-row>
-        <ion-col><ion-button color="warning"><ion-icon slot="start" name="star"></ion-icon>Liste 3</ion-button></ion-col>
-        <ion-col><ion-button color="danger"><ion-icon slot="start" name="star"></ion-icon>Liste 4</ion-button></ion-col>
+        <ion-col>
+          <ion-button expand="block" color="success"><ion-icon slot="start" name="star"></ion-icon>Courses</ion-button>
+          <ion-button expand="block" color="tertiary"><ion-icon slot="start" name="star"></ion-icon>Wish list</ion-button>
+          <ion-button expand="block" color="medium"><ion-icon slot="start" name="star"></ion-icon>Préparatifs anniversaire</ion-button>
+          <ion-button expand="block" color="primary"><ion-icon slot="start" name="star"></ion-icon>Valises</ion-button>
+        </ion-col>
       </ion-row>
     </ion-grid>
   </div>
